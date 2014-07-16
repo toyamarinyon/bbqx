@@ -1,0 +1,58 @@
+extends ./layout
+block contents
+  include ./views/header
+  .contents.contents-video.bg-pale-red
+    video(src="./assets/video/bbqx.mp4",loop,autoplay)
+  .contents.contents-tldr.bg-pale-blue
+    section.container
+      .row.text-center.contents-header
+        h3 「バーベキュー」×「勉強会」で出会い、ひらめく
+      .row.contents-body
+        .col-xs-12.col-sm-4
+          .point.text-center
+            .symbol.fire-symbol.bg-pale-red(style="height: 100px; width: 100px")
+            h4 焼いて
+            p.small
+              | まずは火起こしから。おいしいお肉が
+              br
+              | 焼けるように頑張ってください。
+
+        .col-xs-12.col-sm-4
+          .point.text-center
+            .symbol.fire-symbol.bg-pale-red(style="height: 100px; width: 100px")
+            h4 食べて
+            p.small
+              | 苦労して焼いたお肉の味は格別。
+              br
+              | ゆっくり味わいください。
+        .col-xs-12.col-sm-4
+          .point.text-center
+            .symbol.fire-symbol.bg-pale-red(style="height: 100px; width: 100px")
+            h4 話そう
+            p.small
+              | お題は何でもOK！
+              br
+              | 集まった人の知識を共有しましょう。
+  //
+    .video-set
+      video#bgvideo(src="./assets/video/bg2.mp4",loop,autoplay)
+      .overtext.text-center
+        .logo
+          img(src="./assets/images/catchcopy.png")
+  //
+    .more-info.text-center
+      a(href="")
+        i.fa.fa-chevron-down
+    #messages.text-center
+      img(src="/assets/images/messages.png")
+    #member.text-center(style="background: #3498db;")
+      a(href="#",data-toggle="modal",data-target="#myModal")
+        img(src="/assets/images/members.png")
+    #dummy.text-center
+      img(src="/assets/images/dummy.png")
+    #joinus.text-center
+      img(src="/assets/images/joinus.png")
+    .container(style="margin-top: 80px;margin-bottom: 40px;")
+      .row
+        .col-md-12.text-center
+          a.btn.btn-primary(href="https://www.agex.co.jp/recruit/entry_engineer.cfm?karaagex=1", target="_blank") エントリーはこちらから
