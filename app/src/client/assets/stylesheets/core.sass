@@ -21,13 +21,25 @@
   padding: 4em
   .title
     border-bottom: solid 3px
+  .longtext
+    line-height: 1.8em
   &.contents-video
     padding: 0em
     video
       min-width: 100%
       opacity: 0.6
+    .overray
+      margin: 0 auto
+      position: absolute
+      z-index: 100
+      width: 100%
+      top: 70%
   &.contents-tldr
     .point
       margin-top: 4em
       .symbol
         margin: 0 auto
+  &.contents-information
+    border-top: 3px solid $vivid-orange
+  &.contents-recruit
+    border: 60px solid $vivid-orange

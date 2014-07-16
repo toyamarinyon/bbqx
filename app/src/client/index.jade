@@ -2,16 +2,28 @@ extends ./layout
 block contents
   include ./views/header
   .contents.contents-video.bg-vivid-orange
+    .overray
+      h1(style="color:#fff;font-weight:bold;") 
+        |「バーベキュー」×「勉強会」×「京都」で
+        br
+        |　出会い、ひらめく
     video(src="./assets/video/bbqx.mp4",loop,autoplay)
-  .contents.contents-tldr.bg-pale-blue
+  .contents.contents-tldr
     section.container
       .row.text-center.contents-header
-        h3 「バーベキュー」×「勉強会」で出会い、ひらめく
+        h3 BBQX(バーベッキュス)とは
+      .row.contents-body
+        .col-xs-12.col-sm-9.col-sm-offset-2
+          p.longtext.small
+            | BBQXとはエイッジェクスコミュニケーションズ社員の有志が集まり結成した
+            |「肉とビールとエンジニアを愛する会」の会員が関西で活躍されているエンジニアのみなさまと
+            | BBQをしながら、勉強会をしようという企画です。
       .row.contents-body
         .col-xs-12.col-sm-4
           .point.text-center
-            .symbol.fire-symbol.bg-pale-red(style="height: 100px; width: 100px")
-            h4 焼いて
+            .symbol.fire-symbol
+              img(src="/assets/images/grill.png")
+            h4.margin-top-30 焼いて
             p.small
               | まずは火起こしから。おいしいお肉が
               br
@@ -19,40 +31,93 @@ block contents
 
         .col-xs-12.col-sm-4
           .point.text-center
-            .symbol.fire-symbol.bg-pale-red(style="height: 100px; width: 100px")
-            h4 食べて
+            .symbol.fire-symbol
+              img(src="/assets/images/eat.png")
+            h4.margin-top-30 食べて
             p.small
               | 苦労して焼いたお肉の味は格別。
               br
               | ゆっくり味わいください。
         .col-xs-12.col-sm-4
           .point.text-center
-            .symbol.fire-symbol.bg-pale-red(style="height: 100px; width: 100px")
-            h4 話そう
+            .symbol.fire-symbol
+              img(src="/assets/images/talk.png")
+            h4.margin-top-30 話そう
             p.small
               | お題は何でもOK！
               br
               | 集まった人の知識を共有しましょう。
-  //
-    .video-set
-      video#bgvideo(src="./assets/video/bg2.mp4",loop,autoplay)
-      .overtext.text-center
-        .logo
-          img(src="./assets/images/catchcopy.png")
-  //
-    .more-info.text-center
-      a(href="")
-        i.fa.fa-chevron-down
-    #messages.text-center
-      img(src="/assets/images/messages.png")
-    #member.text-center(style="background: #3498db;")
-      a(href="#",data-toggle="modal",data-target="#myModal")
-        img(src="/assets/images/members.png")
-    #dummy.text-center
-      img(src="/assets/images/dummy.png")
-    #joinus.text-center
-      img(src="/assets/images/joinus.png")
-    .container(style="margin-top: 80px;margin-bottom: 40px;")
-      .row
-        .col-md-12.text-center
-          a.btn.btn-primary(href="https://www.agex.co.jp/recruit/entry_engineer.cfm?karaagex=1", target="_blank") エントリーはこちらから
+  .contents.contents-information
+    section.container
+      .row.text-center.contents-header
+        h3 開催情報
+      .row.contents-body.margin-top-60
+        .col-xs-12.col-sm-5.col-sm-offset-1
+          dl.dl-horizontal
+            dt 日時
+            dd 2014/07/21(月) 12:00 - 16:00
+        .col-xs-12.col-sm-5
+          dl.dl-horizontal
+            dt 会場
+            dd IN THE GREEN(京都 北山)
+            dd
+              a(href="http://www.inthegreen.jp/",target="_blank") (店舗サイト)
+      .row.contents-body
+        .col-xs-12.col-sm-8.col-sm-offset-2
+          p.lead.text-center スケジュール
+          table.table
+            thead
+              tr
+                td 時間
+                td 内容
+            tbody
+              tr
+                td 12:00
+                td 開会宣言
+              tr
+                td 12:30
+                td [基調講演] 京都で働くということについて
+              tr
+                td 13:00
+                td [ゲーム] 高級食材争奪！エンジニアクイズ大会
+              tr
+                td 14:00
+                td [発表] vim 〜世界でひとつの彼女
+              tr
+                td 14:30
+                td [発表] 入社からこれまでの失敗史
+              tr
+                td 15:00
+                td [LT] 暗黙知を知らない組織の作り方
+              tr
+                td 15:20
+                td [LT] 障害が発生したら担当者を電話で呼び出す監視システムの作り方
+              tr
+                td 15:40
+                td [LT] 妻というインフラの運用ノウハウ、障害報告
+              tr
+                td 16:00
+                td 閉会宣言
+      .row.contents-body.margin-top-60
+        .col-xs-12.col-sm-8.col-sm-offset-2
+          a.btn.btn-block.btn-info(href="http://connpass.com/event/7571/",target="_blank") お申込みはこちらから(別サイトに移動します)
+
+  .contents.contents-recruit
+    section
+      .row.text-center.contents-header.text-center
+        h3 転職活動中の方へ！！
+      .row.contents-body.text-center.margin-top-40
+        .symbol.fire-symbol
+          img(src="/assets/images/meet.png")
+      .row.contents-body.margin-top-40
+        .col-xs-12.col-sm-10.col-sm-offset-1
+          p.longtext
+            | エイジェックスコミュニケーションズはエンジニア採用を積極的に行っています。
+            | (ここだけの話、エンジニアが全然足りていません。クライアントからたくさんの開発案件をいただいていますが、待ってもらっています。)
+          p.longtext
+            | 興味のある方は、是非この勉強会に参加していただき、社員と話してみてください。
+            | また、今すぐ話を聞いてみたい方は、以下の採用特設ページからエントリーください。
+      .row.contents-body.margin-top-60
+        .col-xs-12.col-sm-8.col-sm-offset-2
+          a.btn.btn-block.btn-primary(href="http://www.agex.co.jp/recruit/eng/",target="_blank") エンジニア採用特設ページ
+
