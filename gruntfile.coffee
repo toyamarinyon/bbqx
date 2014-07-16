@@ -82,7 +82,7 @@ module.exports = (grunt) ->
           bundleExec : true
           sassDir : directoryConfig.appSrc + directoryConfig.appStyleSheets
           cssDir  : directoryConfig.appDist + directoryConfig.appStyleSheets
-          raw     : 'output_style = :compressed\n'
+          outputStyle: 'nested'
 
     imagemin:
       png:
