@@ -1,13 +1,13 @@
 extends ./layout
 block contents
   include ./views/header
-  .contents.contents-video.bg-vivid-orange
+  .contents.contents-video.bg-vivid-orange.hidden-xs.overray-container
+    video(src="./assets/video/bbqx.mp4",loop,autoplay)
     .overray
       h1(style="color:#fff;font-weight:bold;") 
         |「バーベキュー」×「勉強会」×「京都」で
         br
         |　出会い、ひらめく
-    video(src="./assets/video/bbqx.mp4",loop,autoplay)
   .contents.contents-tldr
     section.container
       .row.text-center.contents-header
